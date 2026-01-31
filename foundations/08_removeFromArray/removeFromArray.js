@@ -1,10 +1,10 @@
 const removeFromArray = function(array, ...numbers) {
-  for(const number of numbersArr){
-    if(array.includes(number)){
+    for(const number of numbers){
         let i = array.indexOf(number);
-        array.splice(i, 1);
+        for(i; array.includes(number);){
+            array.splice(i, 1);
+        }
     }
-  }
   return array;
 };
 
