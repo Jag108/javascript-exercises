@@ -1,21 +1,24 @@
 const sumAll = function(num1, num2) {
-    let start = 0;
-    let end = 0;
-    let total = 0;
+    let result = 0;
+    
+    if((Number.isInteger(num1) && 
+        Number.isInteger(num2)) && 
+        (num1 > 0 && num2 > 0)){
 
-    if(num1 < num2){
-        start = num1;
-        end = num2;
+        if(num1 < num2){
+            for(num1; num1 <= num2; ++num1){
+                result += num1;
+            }
+        }else{
+            for(num2; num2 <= num1; ++num2){
+                result += num2;
+            }            
+        }
     }else{
-        start = num2;
-        end = num1;
+        return result = "ERROR";
     }
+    return result;
 
-    for(start; start <= end; ++start){
-        total += start;
-    }
-
-    return total;
 };
 
 // Do not edit below this line
